@@ -1,0 +1,20 @@
+<table style="table-layout: auto">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Pieces</th>
+        <th>Image</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of produits">
+        <td>{{ produit.nom}}</td>
+        <td>{{ produit.prix}}€</td>
+        <td>{{ produit.pieces}}</td>
+        <td><img src="{{urlImages}}{{produit.image}}" alt="{{produit.nom}}"></td>
+        <td><button><a routerLink="/box-details/{{produit.id}}">Voir le détail</a></button></td>
+      </tr>
+    </tbody>
+  </table>

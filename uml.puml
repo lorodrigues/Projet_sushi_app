@@ -1,0 +1,26 @@
+@startuml uml
+left to right direction
+
+actor Utilisateur as U
+rectangle "Application de commande de plateaux de sushi" as App {
+  rectangle "Page d'accueil" as Home
+  rectangle "Détail d'une box" as BoxDetail
+  rectangle "Panier" as Cart
+  rectangle "Commande en cours" as CurrentOrder
+}
+
+U -> Home : Accède à l'application
+Home --> U : Affiche les box disponibles
+U -> BoxDetail : Affiche le détail d'une box
+BoxDetail --> U : Affiche la composition et les saveurs de la box
+U -> Cart : Gère le contenu du panier
+Cart --> U : Affiche le contenu du panier (nom, image, prix, nombre de pièces)
+U -> Cart : Ajoute une box au panier
+U -> Cart : Retire une box du panier
+U -> CurrentOrder : Consulte l'état de la commande courante
+CurrentOrder --> U : Affiche l'état de la commande courante
+U -> CurrentOrder : Valide la commande courante
+U -> CurrentOrder : Modifie la commande courante
+U -> CurrentOrder : Supprime la commande courante
+
+@enduml

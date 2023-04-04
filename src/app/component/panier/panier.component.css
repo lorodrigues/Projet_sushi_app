@@ -1,0 +1,73 @@
+.panier {
+  margin: 50px auto;
+  width: 80%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.produit-image {
+  max-width: 100px;
+}
+
+button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #c82333;
+}
+
+.panier-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.panier-prix {
+  display: flex;
+  flex-direction: column;
+}
+
+.panier-prix h6 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.panier-valider {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.panier-valider:hover {
+  background-color: #218838;
+}

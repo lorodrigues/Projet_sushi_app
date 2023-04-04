@@ -1,0 +1,22 @@
+<table style="table-layout: auto;">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Pieces</th>
+        <th>Image</th>
+        <th>Details</th>
+        <th>Ajouter au Panier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of produits">
+        <td>{{produit.nom}}</td>
+        <td>{{produit.prix}}€</td>
+        <td>{{produit.pieces}}</td>
+        <td><img src="http://localhost:8080/api/images/{{produit.image}}" alt="{{produit.nom}}"></td>
+        <td><button><a routerLink="/box-details/{{ produit.id }}">Voir le détail</a></button></td>
+        <td><a href="#">Ajouter au Panier</a></td>
+      </tr>
+    </tbody>
+  </table>

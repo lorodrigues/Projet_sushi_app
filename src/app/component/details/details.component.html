@@ -1,0 +1,28 @@
+<div class="box-details content">
+  <div class="box-details-header">
+    <div class="row">
+      <div class="col-lg-6">
+    <img [src]="urlImages + box.image" alt="{{ box.nom }}">
+      </div>
+      <div class="col-lg-6">
+    <h2>{{ box.nom }}</h2>
+    <p>{{ box.description }}</p>
+  <div class="box-details-content">
+    <ul>
+      <li *ngFor="let contenu of box.contenu">{{ contenu }}</li>
+    </ul>
+    <h3>Prix :</h3>
+    <p>{{ box.prix }} €</p>
+    <h3>Saveurs :</h3>
+    <p>{{ box.saveurs }}</p>
+    <h3>Aliments :</h3>
+    <li *ngFor="let aliments of box.aliments">{{ aliments.nom }} ({{ aliments.quantite }})</li>
+    <button (click)="ajouterAuPanier(box);">Ajouter au panier</button>
+  </div></div>
+    </div>
+  </div>
+</div>
+
+
+
+  
